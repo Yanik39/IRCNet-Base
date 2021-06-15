@@ -1,0 +1,68 @@
+#!/usr/bin/expect
+
+set timeout -1
+
+spawn ./Config -nointro
+
+expect { 
+	send "show hw-inventory details\r"
+	"Press Enter to continue" { 
+		send -- "\r"
+	}
+	"If you install UnrealIRCd for the first time on this shell, then just hit Enter" {
+		send -- "\r"
+	}
+	"You can just press ENTER to accept the defaults" {
+		send -- "\r"
+	}
+}
+
+expect "In what directory do you want to install UnrealIRCd?"
+send -- "/home/ircnet/UnrealIRCd\r"
+
+expect "What should the default permissions for your configuration files be? (Set this to 0 to disable)"
+send -- "\r"
+
+expect "If you want, you can manually enter the path to OpenSSL/LibreSSL here."
+send -- "\r"
+
+expect "Do you want to enable remote includes?"
+send -- "\r"
+
+expect "Do you want to enable prefixes for chanadmin and chanowner?"
+send -- "\r"
+
+expect "How far back do you want to keep the nickname history?"
+send -- "\r"
+
+expect "What is the maximum number of sockets (and file descriptors) that"
+send -- "\r"
+
+expect "Would you like to pass any custom parameters to configure?"
+send -- "\r"
+
+expect "UnrealIRCd requires an SSL certificate in order to work."
+send -- "\r"
+
+expect "Press ENTER to continue"
+send -- "\r"
+
+expect "Country Name"
+send -- "\r"
+
+expect "State/Province"
+send -- "\r"
+
+expect "Locality Name"
+send -- "\r"
+
+expect "Organization Name"
+send -- "\r"
+
+expect "Organizational Unit Name"
+send -- "\r"
+
+expect "Common Name"
+send -- "\r"
+
+expect eof
