@@ -41,4 +41,3 @@ jobs:
           tags: |
             yanik39/ircnet:base
             ghcr.io/yanik39/ircnet-base:latest
-            ghcr.io/yanik39/ircnet-base:${{ env.DATE }}
