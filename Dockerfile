@@ -76,5 +76,4 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key ad
 		/var/tmp/* /usr/share/doc/ /usr/share/man/ /usr/share/locale/ \
 		/root/.cache /root/.local /root/.npm /root/.gnupg /root/.config && \
 	groupadd ircnet && useradd -ms /bin/bash -g ircnet ircnet && \
-	chown -R ircnet:ircnet /home/ircnet /usr/local/ircnet
 
