@@ -31,9 +31,6 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
-        name: Get the Date
-        run: echo "DATE=$(date +%d-%B-%Y)" >> $GITHUB_ENV
-      -
         name: Push_Docker DEV
         uses: docker/build-push-action@v2
         with:
