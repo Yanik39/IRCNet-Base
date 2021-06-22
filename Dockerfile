@@ -1,6 +1,7 @@
 FROM python:slim AS base
 
-ENV	ATHEME_VERSION="7.2.11" \
+ENV UNREAL_VERSION="" \
+	ATHEME_VERSION="" \
 	DEBIAN_FRONTEND="noninteractive" \
 	TERM="xterm-256color" \
 	LC_ALL="C.UTF-8"
