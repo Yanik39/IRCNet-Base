@@ -1,7 +1,6 @@
 FROM python:slim AS base
 
-ENV UNREAL_VERSION="5.2.0.1" \
-	ATHEME_VERSION="7.2.11" \
+ENV	ATHEME_VERSION="7.2.11" \
 	DEBIAN_FRONTEND="noninteractive" \
 	TERM="xterm-256color" \
 	LC_ALL="C.UTF-8"
@@ -17,7 +16,7 @@ RUN apt-get update && \
 	apt-get upgrade -y --with-new-pkgs && \
 	apt-get install -y --no-install-recommends \
 		build-essential wget curl gnupg2 expect \
-		cmake file pkg-config gettext libssl-dev && \
+		cmake file pkg-config gettext libssl-dev jq && \
 	groupadd ircnet && \
 	useradd -mg ircnet ircnet && \
 	mkdir -p /home/ircnet/UnrealIRCd /home/ircnet/Atheme-Services && \

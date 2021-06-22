@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+UNREAL_VERSION=$(curl -s https://www.unrealircd.org/downloads/list.json | jq -r '.[][].version')
 cd /tmp
 wget https://www.unrealircd.org/downloads/unrealircd-$UNREAL_VERSION.tar.gz{,.asc}
 gpg --keyserver keyserver.ubuntu.com --recv-key 0xA7A21B0A108FF4A9
