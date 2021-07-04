@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-UNREAL_VERSION=$(curl -s https://www.unrealircd.org/downloads/list.json | jq -r '.[][].version')
+UNREAL_VERSION=$(curl -s https://www.unrealircd.org/downloads/list.json | jq -r '.[].Stable.version')
 
 cd /tmp
 wget https://www.unrealircd.org/downloads/unrealircd-$UNREAL_VERSION.tar.gz{,.asc}
