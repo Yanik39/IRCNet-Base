@@ -2,7 +2,7 @@ name: Push_Docker Main
 
 on:
   schedule:
-    - cron:  '39 4,16 * * *'
+    - cron:  '39 5,17 * * *'
   push:
     branches:
       - 'main'
