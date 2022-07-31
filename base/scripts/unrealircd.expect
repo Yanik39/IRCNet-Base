@@ -35,6 +35,9 @@ send -- "\r"
 expect "GeoIP is a feature that allows converting an IP address to a location (country)"
 send -- "\r"
 
+expect "What is the maximum number of sockets (and file descriptors) that"
+send -- "\r"
+
 expect "Are you running UnrealIRCd as a test, debugging a problem or developing a module?"
 send -- "\r"
 
