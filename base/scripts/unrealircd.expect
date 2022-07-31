@@ -44,7 +44,7 @@ send -- "\r"
 expect "Would you like to pass any custom parameters to configure?"
 send -- "\r"
 
-expect "UnrealIRCd requires an SSL certificate in order to work."
+expect "UnrealIRCd requires a TLS certificate in order to work."
 send -- "\r"
 
 expect "Press ENTER to continue"
