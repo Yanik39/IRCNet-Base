@@ -58,14 +58,14 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key ad
 	apt-get update && \
 	apt-get upgrade -y --with-new-pkgs && \
 	apt-get install -y --no-install-recommends \
-		bash nano net-tools htop wget && \	
+		bash nano net-tools htop wget git && \	
 	dpkg -i /help/fake_python3-minimal_3.9.2-3_all.deb && \
 	apt-get update && \
 	apt-get upgrade -y --with-new-pkgs && \
 	apt-get install -y --no-install-recommends nodejs && \
 	apt-get clean autoclean -y && apt-get autoremove -y && \
-	npm install -g npm@latest && \
-	npm install -g yarn@latest && \
+	npm install --location=global npm@latest && \
+	npm install --location=global yarn@latest && \
 	yarn global add thelounge && \
 	npm cache clean --force && \
 	yarn cache clean --all && \
