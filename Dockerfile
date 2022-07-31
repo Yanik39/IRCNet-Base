@@ -58,7 +58,7 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key ad
 	apt-get update && \
 	apt-get upgrade -y --with-new-pkgs && \
 	apt-get install -y --no-install-recommends \
-		bash nano net-tools htop wget git && \	
+		bash nano net-tools top wget git whois && \	
 	dpkg -i /help/fake_python3-minimal_3.9.2-3_all.deb && \
 	apt-get update && \
 	apt-get upgrade -y --with-new-pkgs && \
